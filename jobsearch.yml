@@ -21,7 +21,7 @@ jobs:
 
       - name: Run job search script
         env:
-          SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
-          EMAIL_USER: ${{ secrets.EMAIL_USER }}
-          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+          SERPAPI_KEY: ${{ c769bcd893435186ff66b4f033daf97909a09de05f68e096cb98591a8d029e4c }}
+          EMAIL_USER: ${{ pnarayankar876@gmail.com }}
+          EMAIL_PASS: ${{ oznc slui xcff ieug }}
         run: python search_and_email.py
