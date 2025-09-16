@@ -2,8 +2,8 @@ name: Daily Job Search
 
 on:
   schedule:
-    - cron: "30 7 * * *"   # Runs every day at 1 PM IST (07:30 UTC)
-  workflow_dispatch:       # Allows you to run manually from GitHub Actions tab
+    - cron: "30 7 * * *"  # Runs every day at 1 PM IST (07:30 UTC)
+  workflow_dispatch:
 
 jobs:
   run-script:
@@ -22,6 +22,7 @@ jobs:
       - name: Run job search script
         env:
           SERPAPI_KEY: ${{ secrets.SERPAPI_KEY }}
-          EMAIL_USER: ${{ secrets.EMAIL_USER }}
-          EMAIL_PASS: ${{ secrets.EMAIL_PASS }}
+          SMTP_USER: ${{ secrets.SMTP_USER }}
+          SMTP_PASS: ${{ secrets.SMTP_PASS }}
+          RECIPIENT_EMAIL: ${{ secrets.RECIPIENT_EMAIL }}
         run: python search_and_email.py
